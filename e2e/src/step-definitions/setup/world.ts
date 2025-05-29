@@ -39,7 +39,8 @@ export class ScenarioWorld extends World {
 
         const automationBrowsers = ['chromium', 'firefox', 'webkit'];
         type AutomationBrowser = typeof automationBrowsers[number];
-        const automationBrowser = 'chromium'//env('UI_AUTOMATION_BROWSER') as AutomationBrowser;
+        //const automationBrowser = 'chromium'//env('UI_AUTOMATION_BROWSER') as AutomationBrowser;
+        const automationBrowser = env('UI_AUTOMATION_BROWSER') as AutomationBrowser;
 
         const browserType: BrowserType = playwright[automationBrowser];
         const browser = await browserType.launch({
