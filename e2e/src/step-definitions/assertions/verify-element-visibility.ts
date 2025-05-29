@@ -1,7 +1,20 @@
 import { Then } from "@cucumber/cucumber";
-import { pageFixture } from "../hooks/browserContextFixture";
 import { expect } from "playwright/test";
 
-Then(/^I am on the Home Page$/, async function() {
-    await pageFixture.page.goto("https://hub.testingtalks.com.au/");
-})
+Then(/^the "([^"]*)" should contains the text "(.*)"$/, async function(elementKey: string, expectedText: string) {
+     const {
+        screen: {page},
+    }=this;
+    const result = await page.textContent("h1.contacts");
+    console.log(`the ${elementKey} should contain the text- ${expectedText}`);
+    expect(result).toBe(expectedText);
+});
+
+Then(/^the "([^"]*)" should be displayed$/, async function(elementKey: string) {
+     const {
+        screen: {page},
+    }=this;
+    console.log(`the ${elementKey} should Displayed`);
+    const locator = page.locator("[data-id='header-logo']")
+    await expect(locator).toBeVisible();
+});
