@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.ScenarioWorld = void 0;
 var _playwright = _interopRequireDefault(require("playwright"));
+var _parseEnv = require("../../env/parseEnv");
 var _cucumber = require("@cucumber/cucumber");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
@@ -36,7 +37,8 @@ var ScenarioWorld = exports.ScenarioWorld = /*#__PURE__*/function (_World) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
             automationBrowsers = ['chromium', 'firefox', 'webkit'];
-            automationBrowser = 'chromium'; //env('UI_AUTOMATION_BROWSER') as AutomationBrowser;
+            //const automationBrowser = 'chromium'//env('UI_AUTOMATION_BROWSER') as AutomationBrowser;
+            automationBrowser = (0, _parseEnv.env)('UI_AUTOMATION_BROWSER');
             browserType = _playwright["default"][automationBrowser];
             _context.next = 5;
             return browserType.launch({
