@@ -17,7 +17,7 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
           return page.textContent("span[id='Automation_Practice'] span strong span span");
         case 3:
           result = _context.sent;
-          console.log("the ".concat(elementKey, " should contain the text- ").concat(expectedText));
+          console.log(" the ".concat(elementKey, " should contain the text- ").concat(expectedText));
           (0, _test.expect)(result).toBe(expectedText);
         case 6:
         case "end":
@@ -36,7 +36,7 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
       while (1) switch (_context2.prev = _context2.next) {
         case 0:
           page = this.screen.page;
-          console.log("the ".concat(elementKey, " should Displayed"));
+          console.log(" the ".concat(elementKey, " should Displayed"));
           locator = page.locator("div.et_pb_menu__logo img");
           _context2.next = 5;
           return (0, _test.expect)(locator).toBeVisible();

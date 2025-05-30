@@ -22,8 +22,7 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
           return this.init(contextOptions);
         case 4:
           ready = _context.sent;
-          return _context.abrupt("return", ready);
-        case 6:
+        case 5:
         case "end":
           return _context.stop();
       }
@@ -58,8 +57,6 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
           _context2.next = 10;
           return browser.close();
         case 10:
-          return _context2.abrupt("return", browser);
-        case 11:
         case "end":
           return _context2.stop();
       }
