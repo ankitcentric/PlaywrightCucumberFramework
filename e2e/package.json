@@ -20,6 +20,7 @@
     "@cucumber/cucumber": "^11.3.0",
     "@playwright/test": "^1.52.0",
     "@types/node": "^22.15.24",
+    "cross-env": "^7.0.3",
     "cucumber-html-reporter": "^6.0.0",
     "dotenv": "^16.5.0",
     "glob": "^9.0.0",
