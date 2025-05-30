@@ -13,7 +13,7 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
         case 0:
           page = this.screen.page;
           _context.next = 3;
-          return page["goto"]("https://hub.testingtalks.com.au/", {
+          return page["goto"]("https://ultimateqa.com/automation", {
             timeout: 60000,
             waitUntil: "domcontentloaded"
           });

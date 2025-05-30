@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1276918899
+              "duration": 2141519399
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3013055400
+              "duration": 1503927900
             }
           },
           {
@@ -40,20 +40,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 56832999
+              "duration": 128163799
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 7,
-            "name": "the \"contacts header\" should contains the text \"Contacts\"",
+            "name": "the \"contacts header\" should contains the text \"Automation Practice\"",
             "match": {
               "location": "src\\step-definitions\\assertions\\verify-element-visibility.ts:4"
             },
             "result": {
               "status": "passed",
-              "duration": 8888100
+              "duration": 13922500
             }
           },
           {
@@ -61,7 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 283488000
+              "duration": 278216400
             }
           }
         ],
