@@ -7,6 +7,7 @@ import playwright, {
 } from "playwright";
 import { env } from "../../env/parseEnv";
 import { World, IWorldOptions, setWorldConstructor } from "@cucumber/cucumber";
+import { GlobalConfig } from "../../env/global";
 
 export type Screen = {
     browser: Browser;
@@ -17,8 +18,10 @@ export type Screen = {
 export class ScenarioWorld extends World {
     constructor(options: IWorldOptions){
         super(options);
+        this.globalConfig = options.parameters as GlobalConfig;
     }
 
+    globalConfig: GlobalConfig;
     screen!: Screen;  // to ignore the error we used !
 
     async init(contextOptions?: BrowserContextOptions): Promise<Screen> {
